@@ -10,16 +10,16 @@
 
 body{
     display: grid;
-    min-height: 100vh;
-    grid-template-columns: 100%;
-    grid-auto-rows: 10% 70% 10% 5% 5%;
+    height: 100vh;
+    width: 100%;
     background-color: rgb(255, 255, 255);
 
 }
 
 header{
-    grid-column: 1;
-    grid-row: 1;  
+    position: fixed;
+    top: 3vh;
+    right: 0.3vh;
     display: flex;
     justify-content:flex-end;
     align-items:flex-end;
@@ -63,15 +63,22 @@ header .perfil:hover{
 }
 
 
+
 main {
-    grid-column: 1;
-    grid-row: 2;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-container h1{
@@ -168,7 +175,8 @@ main {
 }
 
 main .search-container{
-    width: 500px;
+    width: 40vh;
+    margin: 0 auto;
     height: 45px;
     border-radius: 25px;
     border: solid 2px rgb(27, 27, 27);
@@ -194,7 +202,7 @@ main .search-container img{
 }
 
 main .search{
-    width: 350px;
+    max-width:50;
     height: 30px;
     margin-left: 20px;
     border-radius: 10px;
@@ -231,7 +239,7 @@ main .search:hover{
 
 
 .button-search{
-    width: 150px;
+    width: 18vh;
     height: 37px;
     border-radius: 6px;
     outline: none;
@@ -275,8 +283,8 @@ main .search:hover{
 }
 
 .location{
-    grid-column: 1;
-    grid-row: 4;
+    position: absolute;
+    bottom: 4vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -295,14 +303,14 @@ main .search:hover{
 }
 
 footer {
-    grid-column: 1;
-    grid-row: 5;
+    position: absolute;
+    bottom: 1vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     align-content: center;
     width: 100%;
-    height: 35px;
+    height: 40px;
     background-color: rgb(231, 231, 231);
     font-size: 13px;
     text-decoration: none;
@@ -314,7 +322,7 @@ footer {
     font-family: 'Noto Sans', sans-serif;
     color:rgba(0, 0, 0, 0.836);
     width: 100%;
-    height: 40px;
+    height: 4vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
